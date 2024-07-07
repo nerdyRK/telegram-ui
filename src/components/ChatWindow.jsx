@@ -17,7 +17,7 @@ const ChatWindow = ({ chatId, userId }) => {
   }, [chatId]);
 
   return (
-    <div className="px-10 py-4 h-full w-full max-h-screen bg-slate-50">
+    <div className="px-10 pt-4 pb-40 w-full min-h-screen ">
       {messages.map((message) => (
         <div
           key={message.id}
@@ -28,15 +28,15 @@ const ChatWindow = ({ chatId, userId }) => {
           }`}
         >
           <div
-            className={`p-4 rounded-lg max-w-xs ${
+            className={`px-4 pt-2 pb-4 rounded-lg  relative max-w-lg ${
               message.sender.name === "BeyondChat"
                 ? "bg-[#8775da] text-white"
-                : "bg-gray-200 text-black"
+                : "bg-[#212121] text-white"
             }`}
           >
             <div className="font-bold">{message.sender.name}</div>
             <div>{message.message}</div>
-            <div className="text-gray-400 text-sm text-right">
+            <div className="text-gray-400  text-sm text-right">
               {new Date(message.created_at).toLocaleTimeString([], {
                 hour: "2-digit",
                 minute: "2-digit",

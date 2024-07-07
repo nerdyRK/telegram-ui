@@ -11,7 +11,7 @@ const Sidebar = ({
   onSelectChat,
 }) => {
   return (
-    <div className="fixed  top-0 left-0 w-full h-full bg-gray-800 text-white md:w-1/3 md:static">
+    <div className="fixed  top-0 left-0 w-full bg-[#2c2c2c] text-white md:w-1/4 md:static">
       <div className="p-4 flex items-center">
         <button onClick={toggleMobileMenu} className="text-white mr-4">
           <svg

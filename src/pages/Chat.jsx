@@ -20,8 +20,8 @@ const Chat = () => {
 
   return (
     <div
-      className={`flex h-screen ${
-        isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+      className={`flex max-h-screen overflow-hidden ${
+        isDarkMode ? "transparent text-white" : "bg-transparent text-black"
       }`}
     >
       <Sidebar
@@ -32,15 +32,15 @@ const Chat = () => {
         onSelectChat={handleChatSelect}
       />
       <div className="flex-1 flex flex-col overflow-hidden">
-        <header className="p-4 bg-gray-800 border-white border-2 flex items-center justify-between">
+        <header className="p-4 bg-[#2c2c2c] border-slate-700 border-2 flex items-center justify-between">
           <h2 className="text-xl">Telegram</h2>
         </header>
-        <div className="flex flex-1 max-h-screen overflow-auto">
+        <div className="flex flex-1 chat-window bg-fixed min-h-screen overflow-x-hidden overflow-y-auto">
           <div className="w-full border-l border-gray-700">
             {selectedChatId ? (
               <ChatWindow chatId={selectedChatId} userId={userId} />
             ) : (
-              <div className="h-full flex items-center justify-center text-gray-500">
+              <div className=" flex items-center justify-center text-gray-500">
                 Select a chat to view messages
               </div>
             )}
