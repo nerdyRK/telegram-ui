@@ -65,7 +65,7 @@ const Chat = () => {
         <header
           className={`${
             isDarkMode ? "bg-[#212121] text-white" : "bg-gray-200 text-black"
-          }  py-2 px-4  sticky top-0 flex items-center justify-between`}
+          }  py-2 px-4 height-[8vh] sticky top-0 flex items-center justify-between`}
         >
           {selectedChat ? (
             <>
@@ -110,7 +110,7 @@ const Chat = () => {
         <div
           className={`${
             isDarkMode ? "bg-[#1a1a1b]" : "bg-gray-100"
-          } flex flex-1 chat-window  bg-fixed min-h-screen overflow-x-hidden overflow-y-auto`}
+          } flex flex-1 chat-window  bg-fixed max-h-[92dvh] min-h-[92dvh] overflow-x-hidden overflow-y-auto`}
         >
           <div className="w-full">
             {selectedChatId ? (
