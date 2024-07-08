@@ -32,7 +32,7 @@ const Sidebar = ({
         <input
           type="text"
           placeholder="Search"
-          className="p-2 pl-10 w-full  rounded-3xl bg-[#2c2c2c] focus:border-blue-600 focus:outline-none"
+          className="p-2 pl-10 w-full  rounded-3xl bg-[#2c2c2c] focus:outline-blue-600 focus:outline-none"
         />
         <IoSearch className="text-gray-400 text-2xl ml-4 absolute left-12" />
       </div>
