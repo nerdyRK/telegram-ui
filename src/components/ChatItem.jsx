@@ -33,7 +33,7 @@ const ChatItem = ({ chat, onSelect }) => {
 
   return (
     <div
-      className="py-2 px-4 border-b border-gray-700 hover:bg-gray-700 cursor-pointer flex items-center"
+      className="py-2 px-4 hover:bg-gray-700 cursor-pointer flex items-center"
       onClick={() => onSelect(id)}
     >
       <div

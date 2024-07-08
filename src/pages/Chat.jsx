@@ -3,7 +3,11 @@ import React, { useState, useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import ChatWindow from "../components/ChatWindow";
 import Menu from "../components/Menu";
-import ChatList from "../components/ChatList";
+import { IoCallOutline } from "react-icons/io5";
+import { IoSearch } from "react-icons/io5";
+import { HiDotsVertical } from "react-icons/hi";
+import { FaArrowLeft } from "react-icons/fa";
+
 import axios from "axios";
 
 const Chat = () => {
@@ -58,15 +62,15 @@ const Chat = () => {
           selectedChatId ? "translate-x-0" : "translate-x-full md:translate-x-0"
         }`}
       >
-        <header className="p-4 bg-[#2c2c2c] border-slate-700 border-2 flex items-center justify-between">
+        <header className="py-2 px-4 bg-[#212121] flex items-center justify-between">
           {selectedChat ? (
             <>
               <div className="flex items-center">
                 <button
-                  className="mr-4 md:hidden border px-2 py-1 rounded"
+                  className="mr-4 md:hidden  px-2 py-1 rounded"
                   onClick={() => setSelectedChatId(null)}
                 >
-                  Back
+                  <FaArrowLeft />
                 </button>
                 <div className="w-10 h-10 bg-gray-500 rounded-full flex items-center justify-center text-white mr-4">
                   {selectedChat.name
@@ -78,18 +82,20 @@ const Chat = () => {
                 </div>
                 <div>
                   <h2 className="text-lg">{selectedChat.name || "User"}</h2>
-                  <p className="text-sm text-gray-400">Last seen recently</p>
+                  <p className="text-sm text-gray-400 mt-[-4px]">
+                    last seen recently
+                  </p>
                 </div>
               </div>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 text-2xl">
                 <button className="p-2 rounded-full hover:bg-gray-700">
-                  <i className="fas fa-phone"></i>
+                  <IoSearch />
                 </button>
                 <button className="p-2 rounded-full hover:bg-gray-700">
-                  <i className="fas fa-video"></i>
+                  <IoCallOutline />
                 </button>
                 <button className="p-2 rounded-full hover:bg-gray-700">
-                  <i className="fas fa-ellipsis-v"></i>
+                  <HiDotsVertical />
                 </button>
               </div>
             </>
@@ -98,9 +104,13 @@ const Chat = () => {
           )}
         </header>
         <div className="flex flex-1 chat-window bg-fixed min-h-screen overflow-x-hidden overflow-y-auto">
-          <div className="w-full border-l border-gray-700">
+          <div className="w-full">
             {selectedChatId ? (
-              <ChatWindow msgs={messages} chatId={selectedChatId} userId={userId} />
+              <ChatWindow
+                msgs={messages}
+                chatId={selectedChatId}
+                userId={userId}
+              />
             ) : (
               <div className="flex items-center justify-center text-gray-500">
                 Select a chat to view messages

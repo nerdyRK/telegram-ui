@@ -1,7 +1,7 @@
-// src/components/Sidebar.js
 import React, { useState } from "react";
 import ChatList from "./ChatList";
 import MobileMenu from "./MobileMenu";
+import { IoSearch } from "react-icons/io5";
 
 const Sidebar = ({
   toggleMobileMenu,
@@ -11,7 +11,7 @@ const Sidebar = ({
   onSelectChat,
 }) => {
   return (
-    <div className="fixed  top-0 left-0 w-full bg-[#2c2c2c] text-white md:w-1/4 md:static">
+    <div className="fixed top-0 left-0 w-full border-r border-gray-700 bg-[#212121] text-white md:w-1/4 md:static">
       <div className="p-4 flex items-center">
         <button onClick={toggleMobileMenu} className="text-white mr-4">
           <svg
@@ -32,8 +32,9 @@ const Sidebar = ({
         <input
           type="text"
           placeholder="Search"
-          className="p-2 w-full rounded bg-gray-700 border border-gray-600"
+          className="p-2 pl-10 w-full  rounded-3xl bg-[#2c2c2c] focus:border-blue-600 focus:outline-none"
         />
+        <IoSearch className="text-gray-400 text-2xl ml-4 absolute left-12" />
       </div>
       <ChatList onSelectChat={onSelectChat} />
       <MobileMenu
