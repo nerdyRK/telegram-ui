@@ -9,7 +9,11 @@ const MessageInput = ({ isDarkMode }) => {
   const [message, setMessage] = useState("");
 
   return (
-    <div className="absolute chat-window bottom-0 left-0 w-full flex items-center p-4">
+    <div
+      className={`${
+        isDarkMode ? "bg-[#1a1a1b]" : "bg-gray-100"
+      } absolute z-10 chat-window bottom-0 left-0 w-full flex items-center p-4`}
+    >
       <input
         type="text"
         value={message}

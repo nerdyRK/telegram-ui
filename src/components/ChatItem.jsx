@@ -35,7 +35,7 @@ const ChatItem = ({ chat, onSelect, isDarkMode }) => {
     <div
       className={`py-2 px-4 ${
         isDarkMode ? "hover:bg-[#1c2834]" : "hover:bg-gray-300"
-      } hover:bg-gray-700 cursor-pointer flex items-center`}
+      } cursor-pointer flex items-center`}
       onClick={() => onSelect(id)}
     >
       <div
