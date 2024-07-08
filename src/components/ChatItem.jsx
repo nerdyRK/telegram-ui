@@ -22,7 +22,7 @@ const getRandomColor = () => {
   return colors[Math.floor(Math.random() * colors.length)];
 };
 
-const ChatItem = ({ chat, onSelect }) => {
+const ChatItem = ({ chat, onSelect, isDarkMode }) => {
   const { id, creator, msg_count, updated_at } = chat;
   const lastMessageTime = new Date(updated_at).toLocaleTimeString([], {
     hour: "2-digit",
@@ -33,7 +33,9 @@ const ChatItem = ({ chat, onSelect }) => {
 
   return (
     <div
-      className="py-2 px-4 hover:bg-gray-700 cursor-pointer flex items-center"
+      className={`py-2 px-4 ${
+        isDarkMode ? "hover:bg-[#1c2834]" : "hover:bg-gray-300"
+      } hover:bg-gray-700 cursor-pointer flex items-center`}
       onClick={() => onSelect(id)}
     >
       <div

@@ -3,7 +3,7 @@ import axios from "axios";
 import ChatItem from "./ChatItem";
 import { FaPen } from "react-icons/fa";
 
-const ChatList = ({ onSelectChat }) => {
+const ChatList = ({ isDarkMode, onSelectChat }) => {
   const [chats, setChats] = useState([]);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -49,7 +49,12 @@ const ChatList = ({ onSelectChat }) => {
       </div>
 
       {chats.map((chat) => (
-        <ChatItem key={chat.id} chat={chat} onSelect={onSelectChat} />
+        <ChatItem
+          isDarkMode={isDarkMode}
+          key={chat.id}
+          chat={chat}
+          onSelect={onSelectChat}
+        />
       ))}
     </div>
   );

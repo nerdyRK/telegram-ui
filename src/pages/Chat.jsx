@@ -62,7 +62,11 @@ const Chat = () => {
           selectedChatId ? "translate-x-0" : "translate-x-full md:translate-x-0"
         }`}
       >
-        <header className="py-2 px-4 bg-[#212121] sticky top-0 flex items-center justify-between">
+        <header
+          className={`${
+            isDarkMode ? "bg-[#212121] text-white" : "bg-gray-200 text-black"
+          }  py-2 px-4  sticky top-0 flex items-center justify-between`}
+        >
           {selectedChat ? (
             <>
               <div className="flex items-center">
@@ -103,10 +107,15 @@ const Chat = () => {
             <h2 className="text-xl">Telegram</h2>
           )}
         </header>
-        <div className="flex flex-1 chat-window bg-fixed min-h-screen overflow-x-hidden overflow-y-auto">
+        <div
+          className={`${
+            isDarkMode ? "bg-[#1a1a1b]" : "bg-gray-100"
+          } flex flex-1 chat-window  bg-fixed min-h-screen overflow-x-hidden overflow-y-auto`}
+        >
           <div className="w-full">
             {selectedChatId ? (
               <ChatWindow
+                isDarkMode={isDarkMode}
                 msgs={messages}
                 chatId={selectedChatId}
                 userId={userId}

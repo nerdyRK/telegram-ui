@@ -4,7 +4,7 @@ import axios from "axios";
 import MessageInput from "./MessageInput";
 import { LiaCheckDoubleSolid } from "react-icons/lia";
 
-const ChatWindow = ({ chatId, msgs, onSendMessage }) => {
+const ChatWindow = ({ isDarkMode, chatId, msgs, onSendMessage }) => {
   return (
     <div className="flex flex-col h-full">
       <div className="flex-1 overflow-y-auto px-4  sm:px-10 pt-4 pb-44 w-full">
@@ -21,7 +21,7 @@ const ChatWindow = ({ chatId, msgs, onSendMessage }) => {
               className={`px-4 pt-2 pb-1 rounded-lg flex flex-col relative max-w-[80%] md:max-w-[70%] ${
                 message.sender.name === "BeyondChat"
                   ? "bg-[#8775da] text-white"
-                  : "bg-[#212121] text-white"
+                  : "bg-[#636262] text-white"
               }`}
             >
               {/* <div className="font-bold">{message.sender.name}</div> */}
@@ -39,7 +39,7 @@ const ChatWindow = ({ chatId, msgs, onSendMessage }) => {
           </div>
         ))}
       </div>
-      <MessageInput onSendMessage={onSendMessage} />
+      <MessageInput isDarkMode={isDarkMode} onSendMessage={onSendMessage} />
     </div>
   );
 };

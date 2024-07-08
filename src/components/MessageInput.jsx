@@ -5,7 +5,7 @@ import { BsEmojiSmile } from "react-icons/bs";
 import { GrAttachment } from "react-icons/gr";
 import { IoMdMic } from "react-icons/io";
 
-const MessageInput = () => {
+const MessageInput = ({ isDarkMode }) => {
   const [message, setMessage] = useState("");
 
   return (
@@ -15,10 +15,16 @@ const MessageInput = () => {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Message"
-        className="flex-1 p-4 pl-10 bg-[#2c2c2c] text-white rounded-lg focus:outline-none"
+        className={`${
+          isDarkMode ? "bg-[#2c2c2c] text-white" : "bg-gray-300 text-black"
+        } flex-1 p-4 pl-10  rounded-lg focus:outline-none`}
       />
       <BsEmojiSmile className="text-2xl cursor-pointer hover:text-[#766ac8] left-6 absolute" />
-      <button className="ml-4 p-3 bg-[#2c2c2c] rounded-full text-white hover:bg-[#766ac8]">
+      <button
+        className={`${
+          isDarkMode ? "bg-[#2c2c2c] text-white" : "bg-gray-400 text-gray-500"
+        } ml-4 p-3  rounded-full text-white hover:bg-[#766ac8]`}
+      >
         <IoMdMic className="text-3xl" />
       </button>
 
