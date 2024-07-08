@@ -2,23 +2,21 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const ChatWindow = ({ chatId, userId }) => {
-  const [messages, setMessages] = useState([]);
+const ChatWindow = ({ chatId, msgs }) => {
+  // useEffect(() => {
+  //   const fetchMessages = async () => {
+  //     const response = await axios.get(
+  //       `https://devapi.beyondchats.com/api/get_chat_messages?chat_id=${chatId}`
+  //     );
+  //     setMessages(response.data.data); // Adjust based on API response structure
+  //   };
 
-  useEffect(() => {
-    const fetchMessages = async () => {
-      const response = await axios.get(
-        `https://devapi.beyondchats.com/api/get_chat_messages?chat_id=${chatId}`
-      );
-      setMessages(response.data.data); // Adjust based on API response structure
-    };
-
-    fetchMessages();
-  }, [chatId]);
+  //   fetchMessages();
+  // }, [chatId]);
 
   return (
     <div className="px-10 pt-4 pb-40 w-full min-h-screen ">
-      {messages.map((message) => (
+      {msgs.map((message) => (
         <div
           key={message.id}
           className={`mb-4 flex ${
