@@ -1,31 +1,74 @@
-// src/components/MobileMenu.js
 import React from "react";
+import { CiBookmark, CiCirclePlus } from "react-icons/ci";
+import { IoIosContact, IoIosSettings } from "react-icons/io";
+import { MdAnimation, MdOutlineFeaturedPlayList } from "react-icons/md";
+import { TbVersions } from "react-icons/tb";
+import { FaBug } from "react-icons/fa";
 
 const MobileMenu = ({ isOpen, toggleMenu, toggleTheme, isDarkMode }) => {
   return (
     <div
-      className={`fixed inset-0 bg-gray-800 bg-opacity-75 z-50 transition-opacity duration-300 ${
+      className={`fixed inset-0 z-50 transition-opacity duration-300 ${
         isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
       onClick={toggleMenu}
     >
-      <div className="absolute top-0 left-0 w-64 bg-gray-900 h-full p-4">
-        <ul>
-          <li className="py-2 hover:bg-gray-700 rounded">Saved Messages</li>
-          <li className="py-2 hover:bg-gray-700 rounded">Contacts</li>
-          <li className="py-2 hover:bg-gray-700 rounded">My Stories</li>
-          <li className="py-2 hover:bg-gray-700 rounded">Settings</li>
-          <li className="py-2 hover:bg-gray-700 rounded">
-            <span>Night Mode</span>
-            <button onClick={toggleTheme} className="ml-2">
-              {isDarkMode ? "🌜" : "🌞"}
-            </button>
+      <div
+        className={`absolute ${
+          window.innerWidth >= 1024 ? "bg-opacity-75" : "bg-gray-800"
+        } z-40`}
+      />
+      <div
+        className="absolute top-0 left-0 w-[74%] sm:w-[80%] md:w-[60%] lg:w-[50%] xl:w-[25%]  h-full  z-50"
+        style={{ background: "#171e28" }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <header
+          className="flex items-center justify-between p-4  rounded-md"
+          style={{ background: "#1c2834" }}
+        >
+          <div className="flex flex-col">
+            <img
+              src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Profile"
+              className="w-12 h-12 rounded-full mb-2"
+            />
+            <span className="text-gray-300">BeyondChats</span>
+            <span className="text-gray-400">+91 9752669856</span>
+          </div>
+          <button
+            onClick={toggleTheme}
+            className="ml-2 text-gray-800"
+            style={{ marginRight: "0rem", marginTop: "-19%" }}
+          >
+            {isDarkMode ? "🌜" : "🌞"}
+          </button>
+        </header>
+        <ul className="space-y-2">
+          <li className="py-3 px-4 hover:bg-gray-700 rounded flex items-center">
+            <CiBookmark className="mr-4 text-xl" /> Saved Messages
           </li>
-          <li className="py-2 hover:bg-gray-700 rounded">Animations</li>
-          <li className="py-2 hover:bg-gray-700 rounded">Telegram Features</li>
-          <li className="py-2 hover:bg-gray-700 rounded">Report a Bug</li>
-          <li className="py-2 hover:bg-gray-700 rounded">
-            Switch to K Version
+          <li className="py-3 px-4 hover:bg-gray-700 rounded flex items-center">
+            <IoIosContact className="mr-4 text-xl" /> Contacts
+          </li>
+          <li className="py-3 px-4 hover:bg-gray-700 rounded flex items-center">
+            <CiCirclePlus className="mr-4 text-xl" /> My Stories
+          </li>
+          <li className="py-3 px-4 hover:bg-gray-700 rounded flex items-center">
+            <IoIosSettings className="mr-4 text-xl" /> Settings
+          </li>
+          <li className="py-3 px-4 hover:bg-gray-700 rounded flex items-center">
+            <MdAnimation className="mr-4 text-xl" /> Animations
+          </li>
+          <li className="py-3 px-4 hover:bg-gray-700 rounded flex items-center">
+            <MdOutlineFeaturedPlayList className="mr-4 text-xl" /> Telegram
+            Features
+          </li>
+          <li className="py-3 px-4 hover:bg-gray-700 rounded flex items-center">
+            <FaBug className="mr-4 text-xl" /> Report a Bug
+          </li>
+          <li className="py-3 px-4 hover:bg-gray-700 rounded flex items-center">
+            <TbVersions className="mr-4 text-xl" /> Switch to K Version
           </li>
         </ul>
       </div>

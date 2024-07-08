@@ -36,7 +36,7 @@ const ChatList = ({ onSelectChat }) => {
 
   return (
     <div
-      className="relative max-h-screen h-full"
+      className="relative max-h-screen h-full overflow-y-auto"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
