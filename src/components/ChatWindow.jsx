@@ -7,7 +7,7 @@ import { LiaCheckDoubleSolid } from "react-icons/lia";
 const ChatWindow = ({ chatId, msgs, onSendMessage }) => {
   return (
     <div className="flex flex-col h-full">
-      <div className="flex-1 overflow-y-auto px-10 pt-4 pb-44 w-full">
+      <div className="flex-1 overflow-y-auto px-4  sm:px-10 pt-4 pb-44 w-full">
         {msgs.map((message) => (
           <div
             key={message.id}
@@ -25,14 +25,14 @@ const ChatWindow = ({ chatId, msgs, onSendMessage }) => {
               }`}
             >
               {/* <div className="font-bold">{message.sender.name}</div> */}
-              <div className="pr-2">{message.message}</div>
-              <div className="text-gray-400 items-end self-end ml-8  text-sm text-right">
+              <div className="pr-2 ">{message.message}</div>
+              <div className="text-slate-300 items-end self-end ml-8  text-sm text-right">
                 {new Date(message.created_at).toLocaleTimeString([], {
                   hour: "2-digit",
                   minute: "2-digit",
                 })}
                 {message.sender.name === "BeyondChat" && (
-                  <LiaCheckDoubleSolid className="ml-2 text-lg inline-block" />
+                  <LiaCheckDoubleSolid className="ml-2  text-lg inline-block" />
                 )}
               </div>
             </div>

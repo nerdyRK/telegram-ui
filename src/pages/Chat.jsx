@@ -62,7 +62,7 @@ const Chat = () => {
           selectedChatId ? "translate-x-0" : "translate-x-full md:translate-x-0"
         }`}
       >
-        <header className="py-2 px-4 bg-[#212121] flex items-center justify-between">
+        <header className="py-2 px-4 bg-[#212121] sticky top-0 flex items-center justify-between">
           {selectedChat ? (
             <>
               <div className="flex items-center">
@@ -87,8 +87,8 @@ const Chat = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex space-x-4 text-2xl">
-                <button className="p-2 rounded-full hover:bg-gray-700">
+              <div className="flex sm:space-x-4 text-2xl">
+                <button className="p-2 hidden sm:block rounded-full hover:bg-gray-700">
                   <IoSearch />
                 </button>
                 <button className="p-2 rounded-full hover:bg-gray-700">
