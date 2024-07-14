@@ -36,7 +36,7 @@ const ChatList = ({ isDarkMode, onSelectChat }) => {
 
   return (
     <div
-      className="relative max-h-screen h-full pb-4 overflow-y-auto"
+      className="relative max-h-screen h-full pb-44 overflow-y-auto"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
