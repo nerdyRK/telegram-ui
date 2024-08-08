@@ -1,0 +1,387 @@
+{
+    "status": "success",
+    "status_code": 200,
+    "message": "Chats fetched successfully!",
+    "data": {
+        "current_page": 1,
+        "data": [
+            {
+                "id": 3964,
+                "created_by": 3878,
+                "org_id": 10,
+                "status": "ongoing",
+                "lead_score": 0,
+                "created_at": "2024-08-06T08:27:19.000000Z",
+                "updated_at": "2024-08-08T08:47:05.000000Z",
+                "msg_count": 23,
+                "creator": {
+                    "id": 3878,
+                    "name": null,
+                    "email": "182.69.177.161",
+                    "phone": null,
+                    "email_verified_at": null,
+                    "password_updated": 0,
+                    "created_at": "2024-08-06T08:27:19.000000Z",
+                    "updated_at": "2024-08-06T11:05:23.000000Z",
+                    "device": "desktop",
+                    "browser": "Opera",
+                    "os": "Mac",
+                    "city": "Delhi",
+                    "country": {
+                        "id": 103,
+                        "name": "India",
+                        "code": "IN",
+                        "phone_code": "91"
+                    }
+                }
+            },
+            {
+                "id": 3944,
+                "created_by": 3868,
+                "org_id": 10,
+                "status": "ongoing",
+                "lead_score": 0,
+                "created_at": "2024-07-26T11:02:47.000000Z",
+                "updated_at": "2024-08-08T07:52:29.000000Z",
+                "msg_count": 68,
+                "creator": {
+                    "id": 3868,
+                    "name": null,
+                    "email": "182.69.176.72",
+                    "phone": null,
+                    "email_verified_at": null,
+                    "password_updated": 0,
+                    "created_at": "2024-07-26T11:02:47.000000Z",
+                    "updated_at": "2024-07-26T11:02:47.000000Z",
+                    "device": "desktop",
+                    "browser": "Chrome",
+                    "os": "Mac",
+                    "city": "Delhi",
+                    "country": {
+                        "id": 103,
+                        "name": "India",
+                        "code": "IN",
+                        "phone_code": "91"
+                    }
+                }
+            },
+            {
+                "id": 3953,
+                "created_by": 3872,
+                "org_id": 10,
+                "status": "ongoing",
+                "lead_score": 0,
+                "created_at": "2024-07-30T07:59:17.000000Z",
+                "updated_at": "2024-08-03T13:34:00.000000Z",
+                "msg_count": 8,
+                "creator": {
+                    "id": 3872,
+                    "name": null,
+                    "email": "182.65.163.53",
+                    "phone": null,
+                    "email_verified_at": null,
+                    "password_updated": 0,
+                    "created_at": "2024-07-30T07:59:16.000000Z",
+                    "updated_at": "2024-07-30T07:59:16.000000Z",
+                    "device": "desktop",
+                    "browser": "Chrome",
+                    "os": "Windows",
+                    "city": "Chennai",
+                    "country": {
+                        "id": 103,
+                        "name": "India",
+                        "code": "IN",
+                        "phone_code": "91"
+                    }
+                }
+            },
+            {
+                "id": 3931,
+                "created_by": 3865,
+                "org_id": 10,
+                "status": "ongoing",
+                "lead_score": 0,
+                "created_at": "2024-07-16T11:57:21.000000Z",
+                "updated_at": "2024-08-02T07:38:04.000000Z",
+                "msg_count": 23,
+                "creator": {
+                    "id": 3865,
+                    "name": null,
+                    "email": "152.59.177.182",
+                    "phone": null,
+                    "email_verified_at": null,
+                    "password_updated": 0,
+                    "created_at": "2024-07-16T11:57:21.000000Z",
+                    "updated_at": "2024-07-16T11:57:21.000000Z",
+                    "device": "desktop",
+                    "browser": "Chrome",
+                    "os": "Windows",
+                    "city": "Navi Mumbai (Reliance Corporate Park)",
+                    "country": {
+                        "id": 103,
+                        "name": "India",
+                        "code": "IN",
+                        "phone_code": "91"
+                    }
+                }
+            },
+            {
+                "id": 3959,
+                "created_by": 3875,
+                "org_id": 10,
+                "status": "ongoing",
+                "lead_score": 0,
+                "created_at": "2024-07-31T06:27:08.000000Z",
+                "updated_at": "2024-08-01T11:06:42.000000Z",
+                "msg_count": 3,
+                "creator": {
+                    "id": 3875,
+                    "name": null,
+                    "email": "152.59.191.166",
+                    "phone": null,
+                    "email_verified_at": null,
+                    "password_updated": 0,
+                    "created_at": "2024-07-31T06:27:08.000000Z",
+                    "updated_at": "2024-07-31T06:27:08.000000Z",
+                    "device": "desktop",
+                    "browser": "Chrome",
+                    "os": "Windows",
+                    "city": "Navi Mumbai (Reliance Corporate Park)",
+                    "country": {
+                        "id": 103,
+                        "name": "India",
+                        "code": "IN",
+                        "phone_code": "91"
+                    }
+                }
+            },
+            {
+                "id": 3956,
+                "created_by": 3874,
+                "org_id": 10,
+                "status": "ongoing",
+                "lead_score": 0,
+                "created_at": "2024-07-30T12:30:44.000000Z",
+                "updated_at": "2024-08-01T07:57:41.000000Z",
+                "msg_count": 16,
+                "creator": {
+                    "id": 3874,
+                    "name": null,
+                    "email": "182.69.179.81",
+                    "phone": null,
+                    "email_verified_at": null,
+                    "password_updated": 0,
+                    "created_at": "2024-07-30T11:21:45.000000Z",
+                    "updated_at": "2024-08-01T10:34:00.000000Z",
+                    "device": "desktop",
+                    "browser": "Chrome",
+                    "os": "Mac",
+                    "city": "Delhi",
+                    "country": {
+                        "id": 103,
+                        "name": "India",
+                        "code": "IN",
+                        "phone_code": "91"
+                    }
+                }
+            },
+            {
+                "id": 3941,
+                "created_by": 3867,
+                "org_id": 10,
+                "status": "ongoing",
+                "lead_score": 0,
+                "created_at": "2024-07-25T09:57:35.000000Z",
+                "updated_at": "2024-07-25T09:57:44.000000Z",
+                "msg_count": 3,
+                "creator": {
+                    "id": 3867,
+                    "name": null,
+                    "email": "182.69.180.61",
+                    "phone": null,
+                    "email_verified_at": null,
+                    "password_updated": 0,
+                    "created_at": "2024-07-25T07:23:24.000000Z",
+                    "updated_at": "2024-07-25T07:23:24.000000Z",
+                    "device": "desktop",
+                    "browser": "Chrome",
+                    "os": "Mac",
+                    "city": "Delhi",
+                    "country": {
+                        "id": 103,
+                        "name": "India",
+                        "code": "IN",
+                        "phone_code": "91"
+                    }
+                }
+            },
+            {
+                "id": 3633,
+                "created_by": 3562,
+                "org_id": 10,
+                "status": "ongoing",
+                "lead_score": 0,
+                "created_at": "2024-06-30T06:45:55.000000Z",
+                "updated_at": "2024-07-22T10:59:53.000000Z",
+                "msg_count": 36,
+                "creator": {
+                    "id": 3562,
+                    "name": "Shone Jogi",
+                    "email": "shonejogisadfasfdf2000@gmail.com",
+                    "phone": "9130907456",
+                    "email_verified_at": null,
+                    "password_updated": 0,
+                    "created_at": "2024-06-30T06:45:55.000000Z",
+                    "updated_at": "2024-06-30T06:45:55.000000Z",
+                    "device": "desktop",
+                    "browser": "Chrome",
+                    "os": "Mac",
+                    "city": "Delhi",
+                    "country": {
+                        "id": 103,
+                        "name": "India",
+                        "code": "IN",
+                        "phone_code": "91"
+                    }
+                }
+            },
+            {
+                "id": 3599,
+                "created_by": 3539,
+                "org_id": 10,
+                "status": "ongoing",
+                "lead_score": 0,
+                "created_at": "2024-05-24T06:25:11.000000Z",
+                "updated_at": "2024-07-21T11:47:22.000000Z",
+                "msg_count": 31,
+                "creator": {
+                    "id": 3539,
+                    "name": "Shone Jogi",
+                    "email": "shonejogi200df0@gmail.com",
+                    "phone": "9130907456",
+                    "email_verified_at": null,
+                    "password_updated": 0,
+                    "created_at": "2024-05-24T06:25:11.000000Z",
+                    "updated_at": "2024-05-24T06:25:11.000000Z",
+                    "device": "desktop",
+                    "browser": "Chrome",
+                    "os": "Mac",
+                    "city": "Delhi",
+                    "country": {
+                        "id": 103,
+                        "name": "India",
+                        "code": "IN",
+                        "phone_code": "91"
+                    }
+                }
+            },
+            {
+                "id": 3930,
+                "created_by": 3864,
+                "org_id": 10,
+                "status": "ongoing",
+                "lead_score": 0,
+                "created_at": "2024-07-16T11:25:17.000000Z",
+                "updated_at": "2024-07-19T09:46:58.000000Z",
+                "msg_count": 46,
+                "creator": {
+                    "id": 3864,
+                    "name": null,
+                    "email": "104.28.215.177",
+                    "phone": null,
+                    "email_verified_at": null,
+                    "password_updated": 0,
+                    "created_at": "2024-07-16T11:25:17.000000Z",
+                    "updated_at": "2024-07-19T09:45:02.000000Z",
+                    "device": "desktop",
+                    "browser": "Chrome",
+                    "os": "GNU\/Linux",
+                    "city": "Indore",
+                    "country": {
+                        "id": 103,
+                        "name": "India",
+                        "code": "IN",
+                        "phone_code": "91"
+                    }
+                }
+            }
+        ],
+        "first_page_url": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats?page=1",
+        "from": 1,
+        "last_page": 11,
+        "last_page_url": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats?page=11",
+        "links": [
+            {
+                "url": null,
+                "label": "&laquo; Previous",
+                "active": false
+            },
+            {
+                "url": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats?page=1",
+                "label": "1",
+                "active": true
+            },
+            {
+                "url": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats?page=2",
+                "label": "2",
+                "active": false
+            },
+            {
+                "url": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats?page=3",
+                "label": "3",
+                "active": false
+            },
+            {
+                "url": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats?page=4",
+                "label": "4",
+                "active": false
+            },
+            {
+                "url": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats?page=5",
+                "label": "5",
+                "active": false
+            },
+            {
+                "url": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats?page=6",
+                "label": "6",
+                "active": false
+            },
+            {
+                "url": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats?page=7",
+                "label": "7",
+                "active": false
+            },
+            {
+                "url": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats?page=8",
+                "label": "8",
+                "active": false
+            },
+            {
+                "url": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats?page=9",
+                "label": "9",
+                "active": false
+            },
+            {
+                "url": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats?page=10",
+                "label": "10",
+                "active": false
+            },
+            {
+                "url": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats?page=11",
+                "label": "11",
+                "active": false
+            },
+            {
+                "url": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats?page=2",
+                "label": "Next &raquo;",
+                "active": false
+            }
+        ],
+        "next_page_url": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats?page=2",
+        "path": "https:\/\/devapi.beyondchats.com\/api\/get_all_chats",
+        "per_page": 10,
+        "prev_page_url": null,
+        "to": 10,
+        "total": 107
+    }
+}

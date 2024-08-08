@@ -11,7 +11,7 @@ const ChatList = ({ isDarkMode, onSelectChat }) => {
     const fetchChats = async () => {
       try {
         const response1 = axios.get(
-          "https://devapi.beyondchats.com/api/get_all_chats?page=1"
+          "https://chats-api-drhq.onrender.com/api/get_all_chats?page=1"
         );
         const response2 = axios.get(
           "https://devapi.beyondchats.com/api/get_all_chats?page=2"
