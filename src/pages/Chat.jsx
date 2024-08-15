@@ -8,11 +8,10 @@ import { IoSearch } from "react-icons/io5";
 import { HiDotsVertical } from "react-icons/hi";
 import { FaArrowLeft } from "react-icons/fa";
 
-import axios from "axios";
+import { sampleChats } from "../utils/sampleChats";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -24,20 +23,21 @@ const Chat = () => {
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
   const handleChatSelect = (chatId) => setSelectedChatId(chatId);
 
-  const userId = 3828;
+  const defaultUser = {
+    name: "Default User",
+    lastSeen: "Last seen recently",
+  };
 
   useEffect(() => {
     if (selectedChatId) {
-      const fetchChatDetails = async () => {
-        const response = await axios.get(
-          `https://devapi.beyondchats.com/api/get_chat_messages?chat_id=${selectedChatId}`
-        );
-        const chatData = response.data.data;
-        setMessages(response.data.data); // Adjust based on API response structure
+      const chatMessages =
+        sampleChats?.find((chat) => chat.id === selectedChatId)?.messages || [];
+      setMessages(chatMessages);
 
-        setSelectedChat(chatData.length ? chatData[0].sender : null);
-      };
-      fetchChatDetails();
+      // Use default user info if no messages exist
+      setSelectedChat(
+        chatMessages.length ? chatMessages[0].sender : defaultUser
+      );
     }
   }, [selectedChatId]);
 
@@ -65,29 +65,24 @@ const Chat = () => {
         <header
           className={`${
             isDarkMode ? "bg-[#212121] text-white" : "bg-gray-200 text-black"
-          }  py-2 px-4 height-[8vh] sticky top-0 flex items-center justify-between`}
+          } py-2 px-4 height-[8vh] sticky top-0 flex items-center justify-between`}
         >
-          {selectedChat ? (
+          {selectedChatId ? (
             <>
               <div className="flex items-center">
                 <button
-                  className="mr-4 md:hidden  px-2 py-1 rounded"
+                  className="mr-4 md:hidden px-2 py-1 rounded"
                   onClick={() => setSelectedChatId(null)}
                 >
                   <FaArrowLeft />
                 </button>
                 <div className="w-10 h-10 bg-gray-500 rounded-full flex items-center justify-center text-white mr-4">
-                  {selectedChat.name
-                    ? selectedChat.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")
-                    : "NA"}
+                  NA
                 </div>
                 <div>
-                  <h2 className="text-lg">{selectedChat.name || "User"}</h2>
+                  <h2 className="text-lg">{selectedChat?.name || "User"}</h2>
                   <p className="text-sm text-gray-400 mt-[-4px]">
-                    last seen recently
+                    {selectedChat?.lastSeen || "Last seen recently"}
                   </p>
                 </div>
               </div>
@@ -110,7 +105,7 @@ const Chat = () => {
         <div
           className={`${
             isDarkMode ? "bg-[#1a1a1b]" : "bg-gray-100"
-          } flex flex-1 chat-window  bg-fixed max-h-[92dvh] min-h-[92dvh] overflow-x-hidden overflow-y-auto`}
+          } flex flex-1 chat-window bg-fixed max-h-[92dvh] min-h-[92dvh] overflow-x-hidden overflow-y-auto`}
         >
           <div className="w-full">
             {selectedChatId ? (
@@ -118,7 +113,6 @@ const Chat = () => {
                 isDarkMode={isDarkMode}
                 msgs={messages}
                 chatId={selectedChatId}
-                userId={userId}
               />
             ) : (
               <div className="flex items-center justify-center text-gray-500">
