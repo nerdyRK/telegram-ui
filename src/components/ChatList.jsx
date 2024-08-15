@@ -14,7 +14,7 @@ const ChatList = ({ isDarkMode, onSelectChat }) => {
           "https://chats-api-drhq.onrender.com/api/get_all_chats?page=1"
         );
         const response2 = axios.get(
-          "https://devapi.beyondchats.com/api/get_all_chats?page=2"
+          "https://chats-api-drhq.onrender.com/api/get_all_chats?page=2"
         );
 
         const [result1, result2] = await Promise.all([response1, response2]);
