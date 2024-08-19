@@ -11,10 +11,10 @@ const ChatList = ({ isDarkMode, onSelectChat }) => {
     const fetchChats = async () => {
       try {
         const response1 = axios.get(
-          "https://chats-api-drhq.onrender.com/api/get_all_chats?page=1"
+          "https://chats-api.vercel.app/api/get_all_chats?page=1"
         );
         const response2 = axios.get(
-          "https://chats-api-drhq.onrender.com/api/get_all_chats?page=2"
+          "https://chats-api.vercel.app/api/get_all_chats?page=2"
         );
 
         const [result1, result2] = await Promise.all([response1, response2]);
